@@ -94,7 +94,7 @@ function outfitter_front_page_widgets() {
 		<div class="skew-inner">
 			<h2 class="yellow">Get a tour of hues</h2>
 			<p>Join sK's mailing list and he'll email you about hues projects &mdash; past and future.</p>
-			<a class="button button-cta"><span>Join the List</span></a>
+			<a class="button button-cta" href="https://app.convertkit.com/landing_pages/402557?v=7" target="_blank"><span>Join the List</span></a>
 		</div>
 	</section>
 
