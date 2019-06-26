@@ -209,6 +209,8 @@ add_action( 'genesis_header', 'genesis_do_nav', 13 );
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_footer', 'genesis_do_subnav', 5 );
 
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+
 add_filter( 'wp_nav_menu_args', 'outfitter_limit_menu_args' );
 /**
  * Reduces the secondary navigation menu to one level depth.
@@ -348,11 +350,13 @@ add_filter( 'genesis_post_meta', 'outfitter_post_meta_filter' );
  */
 function outfitter_post_meta_filter( $post_meta ) {
 
-	$post_meta = '[post_author_posts_link before="Article by<br />"] [post_comments before="Comments<br />"] [post_categories before="Category<br />"] [post_tags before="Tags<br />"] [post_edit]';
+	$post_meta = '[post_tags before="<h6>Tagged</h6>"]';
 
 	return $post_meta;
 
 }
+
+remove_action( 'genesis_after_entry', 'genesis_get_comments_template' );
 
 // Repositions the entry footer and markup.
 remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
@@ -424,23 +428,6 @@ add_filter( 'genesis_author_box_gravatar_size', 'outfitter_author_box_gravatar' 
 function outfitter_author_box_gravatar( $size ) {
 
 	return 90;
-
-}
-
-add_filter( 'genesis_comment_list_args', 'outfitter_comments_gravatar' );
-/**
- * Modifies the size of the Gravatar in the entry comments.
- *
- * @since 1.0.0
- *
- * @param array $args The comment list arguments.
- * @return array Arguments with new avatar size.
- */
-function outfitter_comments_gravatar( $args ) {
-
-	$args['avatar_size'] = 60;
-
-	return $args;
 
 }
 
@@ -665,7 +652,7 @@ function press_clippings_post_type() {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky')
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'sticky')
 	 	) /* end of options */
 	); /* end of register post type */
 

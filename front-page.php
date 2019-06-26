@@ -90,7 +90,7 @@ function outfitter_front_page_widgets() {
 		)
 	); ?>
 
-	<section id="home-mailing-list" class="skew hero black-bg text-white text-center bigpad">
+	<section id="home-mailing-list" class="skew hero black-bg negative-pad-margin text-white text-center bigpad">
 		<div class="skew-inner">
 			<h2 class="yellow">Get a tour of hues</h2>
 			<p>Join sK's mailing list and he'll email you about hues projects &mdash; past and future.</p>

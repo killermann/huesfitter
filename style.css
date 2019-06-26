@@ -152,9 +152,6 @@ input[type="search"]{
 /* Typographical Elements
 --------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:700&display=optional');
-
-
 html {
 	font-size: 62.5%; /* 10px browser default */
 }
@@ -801,7 +798,7 @@ th:first-child {
 .full-width-narrow .content {
 	float: none;
 	margin: 0 auto;
-	max-width: 800px;
+	max-width: 720px;
 }
 
 /* Primary Sidebar */
@@ -909,7 +906,9 @@ th:first-child {
 	font-size: 1.2rem;
 	letter-spacing: 2px;
 	padding-bottom: 30px;
+	font-weight: 600;
 	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif-condensed, sans-serif
 }
 
 .after-entry,
@@ -1089,6 +1088,14 @@ img.alignright,
 .entry-content .wp-playlist,
 .entry-content .wp-video {
 	margin: 0 0 28px;
+}
+
+.entry-content > p:first-of-type, p.introParagraph {
+	font-family: "Cambria", "Times New Roman", Times, serif;
+	font-size: 1.5em;
+	line-height: 1.3;
+	letter-spacing: -0.04em;
+	text-rendering: optimizelegibility;
 }
 
 
@@ -2049,6 +2056,11 @@ h1.product_title {
 	padding: 80px;
 }
 
+.negative-pad-margin {
+	margin-left: -40px;
+	margin-right: -40px;
+}
+
 .entry-content .alignwide {
     margin-left  : -10vw;
     margin-right : -10vw;
@@ -2118,7 +2130,7 @@ h1.product_title {
 	}
 
 	.site-header .nav-primary {
-		max-width: 560px;
+		max-width: 640px;
 	}
 
 }
@@ -2390,6 +2402,11 @@ h1.product_title {
 
 	.bigpad {
 		padding: 40px;
+	}
+
+	.negative-pad-margin {
+		margin-left: unset;
+		margin-right: unset;
 	}
 
 	body, .hero-text h1 {
