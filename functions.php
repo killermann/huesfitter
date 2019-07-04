@@ -431,6 +431,43 @@ function outfitter_author_box_gravatar( $size ) {
 
 }
 
+/** Add Child Pages **/
+
+
+add_action( 'genesis_after_entry_content', 'loop_child_pages', 1 );
+
+function loop_child_pages() {
+    if (is_page()) {
+
+        global $post;
+
+        $args = array(
+            'post_parent' => $post->ID,
+            'post_type' => 'page',
+            'orderby' => 'menu_order'
+        );
+
+        $child_query = new WP_Query( $args );
+
+        echo '<div class="loop">';
+
+        while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+
+            <a <?php post_class('card'); ?> href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
+                <h3><?php the_title(); ?></h3>
+                <?php the_excerpt(); ?>
+            </a>
+        <?php endwhile; ?>
+
+        <?php
+        wp_reset_postdata();
+
+        echo '</div>';
+    }
+
+}
+
+
 /**
  * Counts used widgets in given sidebar.
  *
