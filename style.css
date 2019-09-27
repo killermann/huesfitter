@@ -360,7 +360,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Barlow Condensed", sans-serif-condensed, sans-serif;
+	font-family: "Barlow Condensed", Arial Narrow, Impact, sans-serif-condensed, sans-serif;
 	line-height: 1;
 	margin: 0 0 10px;
 	text-transform: uppercase;
@@ -544,7 +544,7 @@ input[type="submit"],
 	border: 0;
 	color: #fff;
 	cursor: pointer;
-	font-family: "Barlow Condensed", sans-serif-condensed, sans-serif;
+	font-family: "Barlow Condensed", Arial Narrow, Impact, sans-serif-condensed, sans-serif;
 	font-size: 1.4rem;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -910,7 +910,7 @@ th:first-child {
 	padding-bottom: 30px;
 	font-weight: 600;
 	text-transform: uppercase;
-	font-family: "Barlow Condensed", sans-serif-condensed, sans-serif
+	font-family: "Barlow Condensed", Arial Narrow, Impact, sans-serif-condensed, sans-serif
 }
 
 .after-entry,
@@ -1541,7 +1541,7 @@ img.alignright,
 	font-weight: 700;
 	line-height: 1;
 	width: 100%;
-	font-family: "Barlow Condensed", sans-serif-condensed, sans-serif;
+	font-family: "Barlow Condensed", Arial Narrow, Impact, sans-serif-condensed, sans-serif;
 	text-transform: uppercase;
 }
 

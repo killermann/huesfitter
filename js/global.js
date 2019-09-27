@@ -65,14 +65,14 @@
 			return;
 		}
 
-		if ( __isMobile() && toggleVisible ) {
+		if ( toggleVisible ) {
 			$contentToggle.css({
 				display: "none",
 				visibility: "hidden"
 			});
 		}
 
-		if ( ! __isMobile() && ! toggleVisible ) {
+		if (  ! toggleVisible ) {
 			$contentToggle.attr( 'style', '' );
 		}
 
