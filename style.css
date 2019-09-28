@@ -2061,12 +2061,8 @@ p.entry-meta a,
 	background-color: #fff;
 	color: #000;
 	position: absolute;
-	top: 2vw;
-	right: 2vw;
-}
-
-.admin-bar .off-screen-container .close {
-	top: 72px;
+	top: 0;
+	right: 0;
 }
 
 .off-screen-content .wrap {

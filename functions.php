@@ -77,13 +77,7 @@ function outfitter_responsive_menu_settings() {
 		'menuIconClass'    => 'far fa-ellipsis-h',
 		'subMenu'          => __( 'Submenu', 'outfitter-pro' ),
 		'subMenuIconClass' => 'far fa-chevron-down',
-		'menuClasses'      => array(
-			'combine' => array(
-				'.nav-primary',
-				'.nav-off-screen',
-			),
-			'others'  => array(),
-		),
+		
 	);
 
 	return $settings;
