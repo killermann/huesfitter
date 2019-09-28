@@ -114,7 +114,7 @@ add_theme_support( 'custom-background' );
 add_theme_support( 'genesis-after-entry-widget-area' );
 
 // Adds image sizes.
-add_image_size( 'featured-image', 1280, 800 );
+add_image_size( 'featured-image', 1200, 630 );
 add_image_size( 'featured-image-widget', 530, 330 );
 
 // Removes header right widget area.
@@ -260,7 +260,7 @@ add_filter( 'widget_text', 'do_shortcode' );
 
 // Repositions default archive image.
 remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
-add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
+remove_action( 'genesis_post_content', 'genesis_do_post_image' );
 
 // Filters the archive image markup.
 add_filter( 'genesis_markup_entry-image-link_open', 'outfitter_custom_archive_image_open' );
@@ -284,7 +284,6 @@ function outfitter_image_alignment( $attributes ) {
 
 }
 
-add_action( 'genesis_entry_header', 'outfitter_featured_image', 1 );
 /**
  * Adds featured image above the entry content.
  *
@@ -314,7 +313,6 @@ function outfitter_featured_image() {
 
 // Repositions the entry meta in the entry header.
 remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-add_action( 'genesis_entry_header', 'genesis_post_info', 5 );
 
 add_filter( 'genesis_post_info', 'outfitter_post_info_filter' );
 /**
